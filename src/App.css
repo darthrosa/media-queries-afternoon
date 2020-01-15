@@ -1,0 +1,133 @@
+.App {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-image: url('http://ethereal-life.com/wp-content/uploads/2017/10/learn-3.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+header {
+  height: 75px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 50px;
+}
+
+#logo {
+  font-family: fantasy;
+  font-size: 25px;
+  color: gold;
+  font-weight: bolder;
+}
+
+.container {
+  margin: 200px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  display: flex;
+  align-items: center;
+
+}
+
+#desktop-nav {
+  margin: 0px;
+  width: 60%;
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
+}
+
+#mobile-nav {
+  margin: 0px;
+  height: 45px;
+  width: 90px;
+  display: none;
+  background-color: gold;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#mobile-nav:active {
+  background: goldenrod;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+.dropdown {
+  position: fixed;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: black;
+  border: none;
+}
+
+#dropdown-container {
+  height: 200px;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: none;
+  animation: open 1s;
+  overflow: hidden;
+}
+
+#container-button {
+  height: 80px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: gold;
+  border: none;
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+}
+
+#container-button:active {
+  background: goldenrod;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+@keyframes open {
+  from{
+    height: 0px;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+@media(max-width: 780px){
+  #desktop-nav {
+    display: none;
+  }
+  #mobile-nav {
+    display: initial;
+  }
+  header {
+    background-color: black;
+  }
+  #dropdown-container {
+    background-color:black;
+  }
+}
+ 
+@media(min-width: 780px){
+  #dropdown-container{
+    display: none;
+  }
+}
